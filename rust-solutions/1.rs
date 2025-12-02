@@ -14,11 +14,15 @@ where
     for line in input.lines().map(str::trim).filter(|l| !l.is_empty()) {
         let mut chars = line.chars();
         let direction = chars.next().expect("missing direction in line");
-        let num: i32 = chars.as_str().trim().parse().expect("failed to parse distance");
+        let num: i32 = chars
+            .as_str()
+            .trim()
+            .parse()
+            .expect("failed to parse distance");
 
         let distance = match direction {
             'L' => -num,
-            'R' =>  num,
+            'R' => num,
             _ => panic!("invalid direction: {}", direction),
         };
 
@@ -31,9 +35,7 @@ where
 }
 
 fn problema() {
-    let hits = process_moves(|_, new_pos, _| {
-        if new_pos == 0 { 1 } else { 0 }
-    });
+    let hits = process_moves(|_, new_pos, _| if new_pos == 0 { 1 } else { 0 });
     println!("password: {}", hits);
 }
 
