@@ -15,4 +15,9 @@ No AI allowed (my personal restriction for this -- but the Gemini TUI is hot stu
 |-----|---------|------|
 |  1  |  15     |  32  |
 |     |  22     |  44  |
+|  2  |         |  33  |
+|     |         |  33  |
+|  3  |  19     |  24  |
+|     |  19     |  24  |
+
 
